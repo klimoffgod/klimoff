@@ -10,5 +10,6 @@ sudo install minikube /usr/local/bin/
 apt autoremove -y
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" && aptitude update && aptitude install -y docker.io  docker-ce docker-ce-cli  docker-compose
 minikube start --vm-driver=docker --force
+screen -d -m minikube dashboard
 screen -d -m kubectl proxy --address='0.0.0.0' --disable-filter=true
 
