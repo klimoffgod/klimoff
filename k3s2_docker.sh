@@ -1,4 +1,5 @@
 apt-get update && apt-get upgrade -y && apt install aptitude sudo mc htop nano wget curl
+aptitude install -y  ca-certificates curl lsb-release net-tools  apt-transport-https gnupg2
 sudo apt update && sudo apt install -y apt-transport-https software-properties-common screen 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
